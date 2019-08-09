@@ -1,8 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net461</TargetFramework>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <IncludeThisBuildOutput>false</IncludeThisBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IncludeDependents.LibraryA\IncludeDependents.LibraryA.csproj" />
+  </ItemGroup>
+
+  <Import Project="WalkEachTargetPerProject.targets" />
 
 </Project>
